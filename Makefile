@@ -1,12 +1,14 @@
 
 .PHONY: setup run check-http2 check-sdk
 
+LOWER_SDK  = $(shell echo $(SDK) | tr A-Z a-z)
+
 setup:
 	@echo "Installing git submodules"
 	@git submodule update --init --recursive
 
 run: check-sdk check-http2
-	@SDK=${SDK} docker-compose run --rm pubnub
+	@SDK=${SDK} LOWER_SDK=${LOWER_SDK} docker-compose run --rm pubnub
 
 # This ensures http2 is downloaded, fixes it if not.
 check-http2:

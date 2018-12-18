@@ -9,6 +9,7 @@ services:
 
   pubnub:
     build: ./SDKs/${SDK}
+    image: pubnub-${LOWER_SDK}
     links:
       - http2
     depends_on:
