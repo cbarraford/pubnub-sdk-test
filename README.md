@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/cbarraford/pubnub-sdk-test.svg?branch=master)](https://travis-ci.org/cbarraford/pubnub-sdk-test)
+
 # pubnub-sdk-test
 This repo was created to test the many SDKs supported by Pubnub.com in an
 automated way.
