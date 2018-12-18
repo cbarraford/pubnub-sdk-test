@@ -16,8 +16,11 @@ run: check-sdk check-http2
 	@SDK=${SDK} LOWER_SDK=${LOWER_SDK} docker-compose run --rm pubnub
 
 run-all: check-http2
-	@echo "Not Implemented"
-	@exit 1
+	@for dir in ./SDKs/* ; do \
+		SDK=$$(echo $$dir | awk -F "/" '{print $$NF}'); \
+		echo "Testing SDK: $$SDK"; \
+		SDK=$$SDK $(MAKE) run; \
+	done
 
 # This ensures http2 is downloaded, fixes it if not.
 check-http2:
