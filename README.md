@@ -12,7 +12,7 @@ make run SDK=NodeJS
 ```
 
 If you want to force a rebuild of the docker image, include `REBUILD=true` in
-your `make command`.
+your `make` command.
 
 ## TODO
  * [ ] -
