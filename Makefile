@@ -15,6 +15,10 @@ run: check-sdk check-http2
 	@docker-compose down --remove-orphans
 	@SDK=${SDK} LOWER_SDK=${LOWER_SDK} docker-compose run --rm pubnub
 
+run-all: check-sdk check-http2
+	@echo "Not Implemented"
+	@exit 1
+
 # This ensures http2 is downloaded, fixes it if not.
 check-http2:
 ifeq (,$(wildcard ./http2/dockerfile))
