@@ -1,5 +1,6 @@
 # pubnub-sdk-test
-This tests a basic method of pubnub for each SDK
+This repo was created to test the many SDKs supported by Pubnub.com in an
+automated way.
 
 ## Test a specific SDK
 
