@@ -34,10 +34,10 @@ make run-all
    Engine](https://www.pubnub.com/docs/chat-engine/getting-started)
  * [ ] - [Swift](https://www.pubnub.com/docs/swift/pubnub-swift-sdk)
  * [ ] - [Java](https://www.pubnub.com/docs/java-se-java/pubnub-java-sdk)
- * [ ] -
+ * [x] -
    [NodeJS](https://www.pubnub.com/docs/nodejs-javascript/pubnub-javascript-sdk)
  * [ ] - [Posix C++](https://www.pubnub.com/docs/posix-cpp/pubnub-cpp-sdk)
  * [ ] - [AngularJS](https://www.pubnub.com/docs/angularjs-javascript/pubnub-javascript-sdk)
  * [ ] - [PHP](https://www.pubnub.com/docs/php/pubnub-php-sdk)
  * [ ] - [Python](https://www.pubnub.com/docs/python/pubnub-python-sdk)
- * [ ] - [Go](https://www.pubnub.com/docs/go/pubnub-go-sdk)
+ * [x] - [Go](https://www.pubnub.com/docs/go/pubnub-go-sdk)
