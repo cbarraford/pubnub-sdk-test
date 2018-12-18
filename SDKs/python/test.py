@@ -1,3 +1,4 @@
+import os
 from pubnub.callbacks import SubscribeCallback
 from pubnub.enums import PNStatusCategory
 from pubnub.pnconfiguration import PNConfiguration
@@ -8,6 +9,7 @@ pnconfig = PNConfiguration()
 pnconfig.origin = 'pubnubcoin.com:4443'
 pnconfig.subscribe_key = 'demo'
 pnconfig.publish_key = 'demo'
+pnconfig.ssl = True
 
 pubnub = PubNub(pnconfig)
 
@@ -46,7 +48,8 @@ class MySubscribeCallback(SubscribeCallback):
             # encrypt messages and on live data feed it received plain text.
 
     def message(self, pubnub, message):
-        print(message)
+        print("pong")
+        os._exit(0)
         pass  # Handle new message stored in message.message
 
 
