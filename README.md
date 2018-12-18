@@ -42,5 +42,5 @@ make run-all
  * [ ] - [Posix C++](https://www.pubnub.com/docs/posix-cpp/pubnub-cpp-sdk)
  * [ ] - [AngularJS](https://www.pubnub.com/docs/angularjs-javascript/pubnub-javascript-sdk)
  * [ ] - [PHP](https://www.pubnub.com/docs/php/pubnub-php-sdk)
- * [ ] - [Python](https://www.pubnub.com/docs/python/pubnub-python-sdk)
+ * [x] - [Python](https://www.pubnub.com/docs/python/pubnub-python-sdk)
  * [x] - [Go](https://www.pubnub.com/docs/go/pubnub-go-sdk)
