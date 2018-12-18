@@ -1,5 +1,5 @@
 
-.PHONY: setup run check-http2 check-sdk
+.PHONY: setup run run-all check-http2 check-sdk 
 
 LOWER_SDK = $(shell echo $(SDK) | tr A-Z a-z)
 
@@ -14,6 +14,10 @@ run: check-sdk check-http2
     fi
 	@docker-compose down --remove-orphans
 	@SDK=${SDK} LOWER_SDK=${LOWER_SDK} docker-compose run --rm pubnub
+
+run-all: check-http2
+	@echo "Not Implemented"
+	@exit 1
 
 # This ensures http2 is downloaded, fixes it if not.
 check-http2:
