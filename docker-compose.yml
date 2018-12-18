@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  http2:
+    build: http2
+    image: http2
+    expose:
+      - "4443"
+
+  pubnub:
+    build: ./SDKs/${SDK}
+    links:
+      - http2
+    depends_on:
+      - http2
+    volumes:
+      - ./SDKs/${SDK}:/code
+    working_dir: /code

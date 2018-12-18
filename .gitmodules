@@ -1,0 +1,3 @@
+[submodule "http2"]
+	path = http2
+	url = git@github.com:stephenlb/http2-proxy.git

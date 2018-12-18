@@ -1,7 +1,25 @@
 # pubnub-sdk-test
 This tests a basic method of pubnub for each SDK
 
-# TODO
+## Setup
+To get your environment setup to run various SDKs, run the following...
+
+```sh
+make setup
+```
+
+As of now, this only pulls down git submodules that this repo is dependent on
+
+## Test a specific SDK
+
+In the `./SDKs` directory, are all the SDKs that are currently supported. To
+test a specific SDK (like NodeJS for example), run the following...
+
+```sh
+make run SDK=NodeJS
+```
+
+## TODO
  * [ ] -
    [Javascript](https://www.pubnub.com/docs/web-javascript/pubnub-javascript-sdk)
  * [ ] -
