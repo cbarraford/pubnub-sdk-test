@@ -11,6 +11,9 @@ test a specific SDK (like NodeJS for example), run the following...
 make run SDK=NodeJS
 ```
 
+If you want to force a rebuild of the docker image, include `REBUILD=true` in
+your `make command`.
+
 ## TODO
  * [ ] -
    [Javascript](https://www.pubnub.com/docs/web-javascript/pubnub-javascript-sdk)
