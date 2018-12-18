@@ -8,7 +8,7 @@ import (
 
 func main() {
 	config := pubnub.NewConfig()
-	config.Origin = "http2:4443"
+	config.Origin = "pubnubcoin.com:4443"
 	config.SubscribeKey = "demo"
 	config.PublishKey = "demo"
 
@@ -74,8 +74,8 @@ func main() {
 		Channel("hello_world").Message(msg).Execute()
 
 	if err != nil {
-		// Request processing failed.
-		// Handle message publish error
+		fmt.Printf("Error: %s\n", err)
+		return
 	}
 
 	fmt.Println(response, status, err)

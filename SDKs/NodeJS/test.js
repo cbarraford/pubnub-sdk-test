@@ -4,7 +4,7 @@ publish()
 function publish() {
    
     pubnub = new PubNub({
-        origin: 'http2:4443',
+        origin: 'pubnubcoin.com:4443',
         publishKey : 'demo',
         subscribeKey : 'demo'
     })

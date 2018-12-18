@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  http2:
+  pubnubcoin.com:
     build: http2
     image: http2
     expose:
@@ -11,9 +11,9 @@ services:
     build: ./SDKs/${SDK}
     image: pubnub-${LOWER_SDK}
     links:
-      - http2
+      - pubnubcoin.com
     depends_on:
-      - http2
+      - pubnubcoin.com
     volumes:
       - ./SDKs/${SDK}:/code
     working_dir: /code
