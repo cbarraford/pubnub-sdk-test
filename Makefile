@@ -7,7 +7,7 @@ setup:
 	@echo "Installing git submodules"
 	@git submodule update --init --recursive
 
-run: check-sdk check-http2
+run: check-http2
 	@if test "$(REBUILD)" = "true" ; then \
         echo "Forcing rebuild of SDK docker image..."; \
 		docker rmi pubnub-${LOWER_SDK}; \
