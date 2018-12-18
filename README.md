@@ -10,8 +10,11 @@ In the `./SDKs` directory, are all the SDKs that are currently supported. To
 test a specific SDK (like NodeJS for example), run the following...
 
 ```sh
-make run SDK=NodeJS
+make run SDK=nodejs
 ```
+
+~Please Note~ that SDKs given should always be lowercase (as the directories
+indicate)
 
 If you want to force a rebuild of the docker image, include `REBUILD=true` in
 your `make` command.
