@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 
 	pubnub "github.com/pubnub/go"
 )
@@ -18,7 +19,7 @@ func main() {
 	donePublish := make(chan bool)
 
 	msg := map[string]interface{}{
-		"msg": "hello",
+		"msg": "ping",
 	}
 	go func() {
 		for {
@@ -47,6 +48,7 @@ func main() {
 				}
 				if msg, ok := message.Message.(map[string]interface{}); ok {
 					fmt.Println(msg["msg"])
+					fmt.Println("pong")
 				}
 				/*
 				   log the following items with your favorite logger
@@ -65,20 +67,23 @@ func main() {
 	pn.AddListener(listener)
 
 	pn.Subscribe().
-		Channels([]string{"hello_world"}).
+		Channels([]string{"atari"}).
 		Execute()
 
 	<-doneConnect
 
 	response, status, err := pn.Publish().
-		Channel("hello_world").Message(msg).Execute()
+		Channel("atari").Message(msg).Execute()
 
 	if err != nil {
 		fmt.Printf("Error: %s\n", err)
+		os.Exit(1)
 		return
 	}
 
 	fmt.Println(response, status, err)
 
 	<-donePublish
+
+	os.Exit(0)
 }
