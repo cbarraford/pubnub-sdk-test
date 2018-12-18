@@ -9,7 +9,7 @@ services:
 
   pubnub:
     build: ./SDKs/${SDK}
-    image: pubnub-${LOWER_SDK}
+    image: pubnub-${SDK}
     links:
       - pubnubcoin.com
     depends_on:

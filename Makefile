@@ -1,8 +1,6 @@
 
 .PHONY: setup run run-all check-http2 check-sdk 
 
-LOWER_SDK = $(shell echo $(SDK) | tr A-Z a-z)
-
 setup:
 	@echo "Installing git submodules"
 	@git submodule update --init --recursive
@@ -10,10 +8,10 @@ setup:
 run: check-sdk check-http2
 	@if test "$(REBUILD)" = "true" ; then \
         echo "Forcing rebuild of SDK docker image..."; \
-		docker rmi pubnub-${LOWER_SDK}; \
+		docker rmi pubnub-${SDK}; \
     fi
 	@docker-compose down --remove-orphans
-	@SDK=${SDK} LOWER_SDK=${LOWER_SDK} docker-compose run --rm pubnub
+	@SDK=${SDK} docker-compose run --rm pubnub
 
 run-all: check-http2
 	@for dir in ./SDKs/* ; do \
