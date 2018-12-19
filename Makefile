@@ -1,4 +1,4 @@
-.PHONY: setup setup-submodules run run-all check-http2 check-sdk interactive rebuild down
+.PHONY: setup setup-submodules run run-all check-http2 check-sdk sh rebuild down
 
 # setup your environment
 setup: setup-submodules
@@ -20,7 +20,7 @@ down:
 	@docker-compose down --remove-orphans
 
 # get into an interactive shell
-interactive: check-sdk check-http2 rebuild down
+sh: check-sdk check-http2 rebuild down
 	@SDK=${SDK} docker-compose run --rm pubnub /bin/sh
 
 # run test for a specific SDK
