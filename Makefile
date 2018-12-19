@@ -12,7 +12,7 @@ setup-submodules:
 rebuild:
 	@if test "$(REBUILD)" = "true" ; then \
         echo "Forcing rebuild of SDK docker image..."; \
-		docker rmi pubnub-${SDK}; \
+		docker rmi pubnub-${SDK} || echo "No image to delete"; \
     fi
 
 # stop docker compose containers
