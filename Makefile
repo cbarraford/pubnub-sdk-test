@@ -1,18 +1,33 @@
+.PHONY: setup setup-submodules run run-all check-http2 check-sdk interactive rebuild down
 
-.PHONY: setup run run-all check-http2 check-sdk 
+# setup your environment
+setup: setup-submodules
 
-setup:
+# isntall git submodules
+setup-submodules:
 	@echo "Installing git submodules"
 	@git submodule update --init --recursive
 
-run: check-sdk check-http2
+# rebuild docker image (if env var specifies)
+rebuild:
 	@if test "$(REBUILD)" = "true" ; then \
         echo "Forcing rebuild of SDK docker image..."; \
 		docker rmi pubnub-${SDK}; \
     fi
+
+# stop docker compose containers
+down:
 	@docker-compose down --remove-orphans
+
+# get into an interactive shell
+interactive: check-sdk check-http2 rebuild down
+	@SDK=${SDK} docker-compose run --rm pubnub /bin/sh
+
+# run test for a specific SDK
+run: check-sdk check-http2 rebuild down
 	@SDK=${SDK} docker-compose run --rm pubnub
 
+# run tests for all SDKs
 run-all: check-http2
 	@for dir in ./SDKs/* ; do \
 		SDK=$$(echo $$dir | awk -F "/" '{print $$NF}'); \
