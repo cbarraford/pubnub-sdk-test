@@ -29,10 +29,11 @@ run: check-sdk check-http2 rebuild down
 
 # run tests for all SDKs
 run-all: check-http2
+	@set -e
 	@for dir in ./SDKs/* ; do \
 		SDK=$$(echo $$dir | awk -F "/" '{print $$NF}'); \
 		echo "Testing SDK: $$SDK"; \
-		SDK=$$SDK $(MAKE) run; \
+		SDK=$$SDK $(MAKE) run || exit $$?; \
 	done
 
 # This ensures http2 is downloaded, fixes it if not.
