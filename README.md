@@ -44,3 +44,4 @@ make run-all
  * [ ] - [PHP](https://www.pubnub.com/docs/php/pubnub-php-sdk)
  * [x] - [Python](https://www.pubnub.com/docs/python/pubnub-python-sdk)
  * [x] - [Go](https://www.pubnub.com/docs/go/pubnub-go-sdk)
+ * [x] - [Perl5](https://github.com/pubnub/pubnub-api/tree/master/perl5/)
