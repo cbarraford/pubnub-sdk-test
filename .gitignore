@@ -59,6 +59,7 @@ ehthumbs_vista.db
 
 # Dump file
 *.stackdump
+*.dump
 
 # Folder config file
 [Dd]esktop.ini
@@ -77,3 +78,20 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/macOS,windows,vim,docker
+
+# Created by https://www.gitignore.io/api/erlang
+# Edit at https://www.gitignore.io/?templates=erlang
+
+### Erlang ###
+.eunit
+deps
+*.o
+*.beam
+*.plt
+erl_crash.dump
+ebin/*.beam
+rel/example_project
+.concrete/DEV_MODE
+.rebar
+
+# End of https://www.gitignore.io/api/erlang
