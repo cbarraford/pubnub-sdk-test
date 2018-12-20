@@ -17,8 +17,6 @@
 ## to web and mobile clients simultaneously.
 
 use Pubnub;
-use JSON;
-use LWP::Simple;
 
 print("Starting...\n");
 
