@@ -4,10 +4,6 @@ MAINTAINER Chad Barraford
 RUN apk update && apk upgrade && \
     apk add --no-cache git
 
-COPY rebar.config .
-
-RUN rebar3 compile
-
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
