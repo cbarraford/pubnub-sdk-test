@@ -1,3 +1,6 @@
 [submodule "http2"]
 	path = http2
 	url = https://github.com/stephenlb/http2-proxy.git
+[submodule "SDKs/erlang/SDKs/erlang/_build/default/lib/hackney"]
+	path = SDKs/erlang/SDKs/erlang/_build/default/lib/hackney
+	url = https://github.com/benoitc/hackney.git

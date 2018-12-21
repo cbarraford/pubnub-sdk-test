@@ -1,0 +1,11 @@
+{application,epubnub,
+             [{description,"Erlang PubNub API"},
+              {vsn,"0.1.0"},
+              {registered,[epubnub_sup]},
+              {applications,[kernel,stdlib,ssl,jsx,hackney]},
+              {mod,{epubnub_app,[]}},
+              {contributors,["Tristan Sloughter"]},
+              {licenses,["LGPL"]},
+              {links,[{"Github","https://github.com/tsloughter/epubnub"}]},
+              {modules,[epn_basic_examples,epn_example_client,epubnub,
+                        epubnub_app,epubnub_sup]}]}.

@@ -1,0 +1,26 @@
+{"1.1.0",
+[{<<"certifi">>,{pkg,<<"certifi">>,<<"2.4.2">>},1},
+ {<<"epubnub">>,{pkg,<<"epubnub">>,<<"0.1.0">>},0},
+ {<<"hackney">>,
+  {git,"git://github.com/benoitc/hackney.git",
+       {ref,"43ab89a670dd6ae996c46fcc993802c78414e66c"}},
+  0},
+ {<<"idna">>,{pkg,<<"idna">>,<<"6.0.0">>},1},
+ {<<"jsx">>,{pkg,<<"jsx">>,<<"2.7.1">>},1},
+ {<<"metrics">>,{pkg,<<"metrics">>,<<"1.0.1">>},1},
+ {<<"mimerl">>,{pkg,<<"mimerl">>,<<"1.0.2">>},1},
+ {<<"parse_trans">>,{pkg,<<"parse_trans">>,<<"3.3.0">>},2},
+ {<<"ssl_verify_fun">>,{pkg,<<"ssl_verify_fun">>,<<"1.1.4">>},1},
+ {<<"unicode_util_compat">>,{pkg,<<"unicode_util_compat">>,<<"0.4.1">>},2}]}.
+[
+{pkg_hash,[
+ {<<"certifi">>, <<"75424FF0F3BAACCFD34B1214184B6EF616D89E420B258BB0A5EA7D7BC628F7F0">>},
+ {<<"epubnub">>, <<"A9A4345E64F659AEEFB2931BF3653F109A5055A84EE7688F07C3A8D1823F0F51">>},
+ {<<"idna">>, <<"689C46CBCDF3524C44D5F3DDE8001F364CD7608A99556D8FBD8239A5798D4C10">>},
+ {<<"jsx">>, <<"30CA834AC0AC6D745E4103D62CCC123C81399E4C937B7751A0185EF16425EDA8">>},
+ {<<"metrics">>, <<"25F094DEA2CDA98213CECC3AEFF09E940299D950904393B2A29D191C346A8486">>},
+ {<<"mimerl">>, <<"993F9B0E084083405ED8252B99460C4F0563E41729AB42D9074FD5E52439BE88">>},
+ {<<"parse_trans">>, <<"09765507A3C7590A784615CFD421D101AEC25098D50B89D7AA1D66646BC571C1">>},
+ {<<"ssl_verify_fun">>, <<"F0EAFFF810D2041E93F915EF59899C923F4568F4585904D010387ED74988E77B">>},
+ {<<"unicode_util_compat">>, <<"D869E4C68901DD9531385BB0C8C40444EBF624E60B6962D95952775CAC5E90CD">>}]}
+].
